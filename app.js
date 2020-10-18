@@ -16,8 +16,9 @@ mongoose.connect(
 
 //import routes
 const authRoute = require('./routes/auth');
+const postsRoute = require('./routes/posts');
 app.use('/auth', authRoute);
-
+app.use('/posts', postsRoute);
 //server
 app.listen($port, () => {
   console.log(`server running ${process.env.SERVER_BASE_URL}:${$port}`);
