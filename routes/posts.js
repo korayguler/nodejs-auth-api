@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const verify = require('./verify');
+const verify = require('../controllers/verify');
 
 router.get('/', verify, (req, res) => {
   res.json({

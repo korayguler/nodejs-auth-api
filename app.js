@@ -3,11 +3,12 @@ const app = express();
 const mongoose = require('mongoose');
 const cors = require('cors');
 require('dotenv').config();
-const $port = process.env.PORT || 3001;
+const PORT = process.env.PORT || 3001;
 
 //Middleware
 app.use(express.json());
 app.use(cors());
+app.use(express.static(__dirname + '/public'));
 
 //Database Connection
 mongoose.connect(
@@ -19,9 +20,11 @@ mongoose.connect(
 //import routes
 const authRoute = require('./routes/auth');
 const postsRoute = require('./routes/posts');
-app.use('/api/auth', authRoute);
-app.use('/api/posts', postsRoute);
+const homeRoute = require('./routes/home');
+app.use('/', homeRoute);
+app.use('/auth', authRoute);
+app.use('/posts', postsRoute);
 //server
-app.listen($port, () => {
-  console.log(`server running ${process.env.SERVER_BASE_URL}:${$port}`);
+app.listen(PORT, () => {
+  console.log(`server running ${process.env.SERVER_BASE_URL}:${PORT}`);
 });

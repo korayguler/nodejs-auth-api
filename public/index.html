@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Node.js Auth API</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+          Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-size: 16px;
+
+        color: #333;
+        background: #d0d0d0;
+      }
+
+      header {
+        margin-bottom: 2em;
+      }
+
+      h1 {
+        font-size: 2em;
+        margin: 2em 0 1em;
+        text-align: center;
+      }
+
+      .code {
+        margin-left: 50%;
+        width: fit-content;
+        height: auto;
+        transform: translateX(-50%);
+        background-color: #fff;
+        padding: 10px;
+        border-radius: 10px;
+        line-height: 2;
+      }
+      strong {
+        font-weight: 700;
+      }
+      .red {
+        color: firebrick;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1><strong>Node.js</strong> API Server is running...</h1>
+      <div class="code">
+        <b> <p>http://https://nodejs--auth-api.herokuapp.com/auth/login</p></b>
+        <p class="red">
+          { "email":"youremail@mail.com", "password":"yourpassword" }
+        </p>
+        <b
+          ><p>http://https://nodejs--auth-api.herokuapp.com/auth/register</p></b
+        >
+        <p class="red">
+          { "name":"yourname",email:"youremail@mail.com",
+          "password":"yourpassword" }
+        </p>
+      </div>
+    </header>
+  </body>
+</html>
